@@ -3,7 +3,7 @@
 int main()
 {
     int choice;
-    double balance = 10000.00;
+    double balance = 10000.00; // declaring initial balance
     double withdrawal, deposit;
     printf("Welcome to ATM simulator\n");
 
@@ -16,7 +16,7 @@ int main()
         printf("Enter your choice:");
         scanf("%d", &choice);
 
-        if (scanf("%d", &choice) != 1)
+        if (scanf("%d", &choice) != 1) // check for valid input and break the loop for invalid input
         {
             printf("Invalid input. Please enter a valid choice.\n");
             continue;
@@ -36,7 +36,7 @@ int main()
             }
             else
             {
-                balance += deposit;
+                balance += deposit; // assign new value to balance after deposit
                 printf("Amount deposited successfully.\n");
                 printf("Your current balance is: %.2lf\n", balance);
             }
@@ -55,7 +55,7 @@ int main()
             }
             else
             {
-                balance = balance - withdrawal;
+                balance = balance - withdrawal; // assign new value to balance after withdrawal
                 printf("Amount withdrawn successfully.\n");
                 printf("Your current balance is: %.2lf\n", balance);
             }
