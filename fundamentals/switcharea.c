@@ -1,15 +1,16 @@
+// first switch case program
 #include <stdio.h>
-#define pi 3.14
+#define pi 3.14 // declaring pi as a constant value
 int main()
 {
     int choice;
-    printf("1. SQUARE");
+    printf("1. SQUARE"); // display a menu of choices to the user
     printf("2.RECTANGLE");
     printf("3.CIRCLE");
     printf("4.REGULAR POLYGON");
     printf("Enter your choice:");
     scanf("%d", &choice);
-    switch (choice)
+    switch (choice) // to perform specific cases acoording to the input choice
     {
     case 1:
     {
