@@ -7,7 +7,7 @@ int main()
     printf("Enter non negative power:");
     scanf("%d", &b);
 
-    if (b < 0)
+    if (b < 0) // check if the power is negative
     {
         printf("Enter valid positive power:");
     }
@@ -15,7 +15,7 @@ int main()
     {
         for (i = 1; i <= b; i++)
         {
-            result = result * a;
+            result = result * a; // multiplying result by a in each iteration
         }
     }
     printf("The result of %d raised to the power of %d is: %d", a, b, result);
