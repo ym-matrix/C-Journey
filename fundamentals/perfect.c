@@ -8,23 +8,23 @@ int main()
 
     if (n < 0)
     {
-        temp = -n;
+        temp = -n; // converting negative values to positive
     }
 
     for (i = 1; i < temp; i++)
     {
-        if (temp % i == 0)
+        if (temp % i == 0) // condition for divisor
         {
             sum = sum + i;
         }
     }
     if (sum == temp)
     {
-        printf("The given number %d is a perfect number:", temp);
+        printf("The given number %d is a perfect number:", n);
     }
     else
     {
-        printf("The given number %d is not a perfect number:", temp);
+        printf("The given number %d is not a perfect number:", n);
     }
     return 0;
 }
