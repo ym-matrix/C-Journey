@@ -7,13 +7,13 @@ int main()
     scanf("%d", &n);
     printf("Enter number of digits:");
     scanf("%d", &digits);
-    temp = n;
+    temp = n; // storing value of n in temp variable
 
     for (i = 0; i <= digits; i++)
     {
-        lastdigit = temp % 10;
-        temp = temp / 10;
-        sum = sum + (int)pow(lastdigit, digits);
+        lastdigit = temp % 10;                   // finding last digit of the number
+        temp = temp / 10;                        // updating the number
+        sum = sum + (int)pow(lastdigit, digits); // using math function to exponent
     }
 
     if (sum == n)
