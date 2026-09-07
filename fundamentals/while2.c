@@ -9,11 +9,11 @@ int main()
     {
         if (n % i == 0)
         {
-            count++;
+            count++; // count the number of factors of the given number
         }
         i++;
     }
-    if (count == 2)
+    if (count == 2) // condition to check whether the number is prime
     {
         printf("The given number %d is a prime number", n);
     }
