@@ -3,6 +3,8 @@ int main()
 {
     int i, pos = 0, neg = 0, zero = 0, n;
     char choice;
+
+    // Run the loop at least once and continue until the user stops.
     do
     {
         printf("\nEnter a number");
@@ -20,14 +22,19 @@ int main()
         {
             zero++;
         }
+
+        // Ask whether another number should be entered.
         printf("\nDo you want to enter another number? (y:n)");
         scanf(" %c", &choice);
 
+        // Stop when the user enters 'n' or 'N'.
         if (choice == 'n' || choice == 'N')
         {
             break;
         }
     } while (1);
+
+    // Display the totals after the loop ends.
     printf("\nNumber of positive numbers=%d", pos);
     printf("\nNumber of negative numbers=%d", neg);
     printf("\nNumber of zeroes=%d", zero);
