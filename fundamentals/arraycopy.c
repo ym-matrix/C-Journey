@@ -18,16 +18,19 @@ int main()
     // Copy elements from arr1 to arr2
     for (i = 0; i < n; i++)
     {
+        // assigning values of array 1 to array 2
         arr2[i] = arr1[i];
     }
 
     printf("Array 1 elements: ");
+    // printing 1st array elements
     for (i = 0; i < n; i++)
     {
         printf("%d ", arr1[i]);
     }
 
     printf("\nArray 2 elements: ");
+    // printing 2nd array elements after copying
     for (i = 0; i < n; i++)
     {
         printf("%d ", arr2[i]);
