@@ -15,12 +15,12 @@ int main()
             if (i % 2 != 0) // odd row -> numbers
             {
                 printf("%d", num);
-                num++;
+                num++; // increment the value of num
             }
             else // even row -> letters
             {
                 printf("%c", ch);
-                ch++;
+                ch++; // increment the value of ch
             }
         }
         printf("\n");
