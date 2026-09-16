@@ -17,8 +17,10 @@ int main()
 
     for (i = 0; i < n; i++)
     {
+        // condition to check if array element is equal to the searching element
         if (arr[i] == element)
         {
+            // result = index value at which the element is found
             result = i;
             break;
         }
