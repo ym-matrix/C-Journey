@@ -1,19 +1,17 @@
 #include <stdio.h>
 int main()
 {
-    int i, j, rows, col;
-    printf("Enter number of rows:");
-    scanf("%d", &rows);
-    printf("Enter number of columns:");
-    scanf("%d", &col);
+    int i, j, n;
+    printf("Enter number of rows and columns");
+    scanf("%d", &n);
 
-    for (i = 0; i <= rows; i++)
+    for (i = 1; i <= n; i++)
     {
-        for (j = 0; j <= i; j++)
+        for (j = n; j >= i; j--)
         {
-            printf("$");
+            printf(" ");
         }
-        printf("\n");
+        printf("ABCDE\n");
     }
     return 0;
 }
