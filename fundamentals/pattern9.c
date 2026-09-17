@@ -7,10 +7,12 @@ int main()
 
     for (i = 1; i <= n; i++)
     {
+        // loop to print leading spaces
         for (j = n; j >= i; j--)
         {
             printf(" ");
         }
+        // to print ABCDE on new line after inner loop
         printf("ABCDE\n");
     }
     return 0;
