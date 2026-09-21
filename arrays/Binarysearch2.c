@@ -11,6 +11,7 @@ int main()
         scanf("%d", &arr[i]);
     }
 
+    // Sort the array in descending order before applying binary search.
     for (i = 0; i < n - 1; i++)
     {
         for (j = 0; j < n - i - 1; j++)
@@ -33,11 +34,13 @@ int main()
     printf("Enter the number to search:");
     scanf("%d", &element);
 
+    // Binary search checks only the remaining range of possible indexes.
     low = 0;
     high = n - 1;
 
     while (low <= high)
     {
+        // Compare the target with the middle element of the current range.
         mid = (low + high) / 2;
 
         if (arr[mid] == element)
@@ -47,11 +50,12 @@ int main()
         }
         else if (arr[mid] > element)
         {
+            // In descending order, smaller values are to the right.
             low = mid - 1;
         }
         else
         {
-
+            // Larger values are to the left.
             high = mid + 1;
         }
     }
