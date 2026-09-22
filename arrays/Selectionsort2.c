@@ -1,12 +1,17 @@
 #include <stdio.h>
+
+// Selection sort program to arrange an array in ascending order
 int main()
 {
     int i, j, temp, n, min_idx;
+
+    // Read the array size and elements
     printf("Enter size of array:");
     scanf("%d", &n);
     int arr[n];
 
     printf("Enter values inside array: ");
+    // Find the smallest remaining element and place it at the current position
     for (i = 0; i < n; i++)
     {
         scanf("%d", &arr[i]);
@@ -28,6 +33,7 @@ int main()
                 min_idx = j;
             }
         }
+        // Swap the smallest element into position
         if (min_idx != i)
         {
             temp = arr[i];
@@ -36,6 +42,7 @@ int main()
         }
     }
 
+    // Print the sorted array
     printf("\nSorted array:");
     for (i = 0; i < n; i++)
     {
