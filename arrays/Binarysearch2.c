@@ -51,12 +51,12 @@ int main()
         else if (arr[mid] > element)
         {
             // In descending order, smaller values are to the right.
-            low = mid - 1;
+            low = mid + 1;
         }
         else
         {
             // Larger values are to the left.
-            high = mid + 1;
+            high = mid - 1;
         }
     }
 
