@@ -6,7 +6,7 @@ int main()
     int i, n, j, temp, maj_idx;
 
     // Read the array size and elements
-    printf("Enter size of array:");
+    printf("Enter size of array(Positive integer):");
     scanf("%d", &n);
     int arr[n];
 
@@ -49,4 +49,3 @@ int main()
         printf("%d", arr[i]);
     }
     return 0;
-}
