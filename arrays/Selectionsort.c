@@ -1,7 +1,11 @@
 #include <stdio.h>
+
+// Selection sort program to arrange an array in descending order
 int main()
 {
-    int i, n, j, temp, min_idx;
+    int i, n, j, temp, maj_idx;
+
+    // Read the array size and elements
     printf("Enter size of array:");
     scanf("%d", &n);
     int arr[n];
@@ -18,24 +22,27 @@ int main()
         printf("%d", arr[i]);
     }
 
+    // Find the largest remaining element and place it at the current position
     for (i = 0; i < n; i++)
     {
-        min_idx = i;
+        maj_idx = i;
         for (j = i + 1; j < n; j++)
         {
-            if (arr[j] > arr[min_idx])
+            if (arr[j] > arr[maj_idx])
             {
-                min_idx = j;
+                maj_idx = j;
             }
         }
-        if (min_idx != i)
+        // Swap the selected element into position
+        if (maj_idx != i)
         {
             temp = arr[i];
-            arr[i] = arr[min_idx];
-            arr[min_idx] = temp;
+            arr[i] = arr[maj_idx];
+            arr[maj_idx] = temp;
         }
     }
 
+    // Print the sorted array
     printf("\nSorted array:");
     for (i = 0; i < n; i++)
     {
