@@ -1,11 +1,16 @@
 #include <stdio.h>
+
+// Program to multiply each element of a matrix by a scalar value
 int main()
 {
     int i, j, n, scalar;
+
+    // Read the size of the square matrix
     printf("Enter size of matrix(NxN):");
     scanf("%d", &n);
     int arr[n][n], result[n][n];
 
+    // Read matrix values
     printf("Enter values inside array:");
     for (i = 0; i < n; i++)
     {
@@ -14,9 +19,12 @@ int main()
             scanf("%d", &arr[i][j]);
         }
     }
+
+    // Read scalar value
     printf("Enter a scalar number:");
     scanf("%d", &scalar);
 
+    // Multiply each matrix element by the scalar
     for (i = 0; i < n; i++)
     {
         for (j = 0; j < n; j++)
@@ -25,6 +33,7 @@ int main()
         }
     }
 
+    // Print the resulting matrix
     printf("New array:\n");
     for (i = 0; i < n; i++)
     {
