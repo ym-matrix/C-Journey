@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int sumOfDigits(int n)
+int sumOfDigits(int n) // function definition
 {
     int sum = 0;
     while (n != 0)
@@ -11,7 +11,7 @@ int sumOfDigits(int n)
     return sum;
 }
 
-int reverseNumber(int n)
+int reverseNumber(int n) // function definition
 {
     int rev = 0;
     while (n != 0)
