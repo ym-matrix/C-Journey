@@ -1,9 +1,12 @@
 #include <stdio.h>
 
+// Structure to store a student's personal and address details.
 struct student
 {
     char name[20];
     int rollno;
+
+    // Nested structure stores the student's address.
     struct address
     {
         char city[10];
@@ -14,11 +17,15 @@ struct student
 int main(void)
 {
     int i, n;
+
+    // Read the number of students.
     printf("Enter the number of students: ");
     scanf("%d", &n);
 
-    struct student s[n]; // array of structures
+    // Create an array of student structures.
+    struct student s[n];
 
+    // Read the details for each student.
     printf("Enter the details of students:\n");
     for (i = 0; i < n; i++)
     {
@@ -32,6 +39,7 @@ int main(void)
         scanf("%d", &s[i].addr.pincode);
     }
 
+    // Display the details of all students.
     printf("\nDetails of students:\n");
     for (i = 0; i < n; i++)
     {
