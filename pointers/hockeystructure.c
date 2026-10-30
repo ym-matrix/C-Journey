@@ -23,5 +23,19 @@ int main()
     }
     for (i = 0; i < n; i++)
     {
+        for (j = i + 1; j < n; j++)
+        {
+            if (player[i].goals < player[j].goals)
+            {
+                struct hockey temp = player[i];
+                player[i] = player[j];
+                player[j] = temp;
+            }
+        }
+    }
+    printf("Player details are:\n");
+    for (i = 0; i < n; i++)
+    {
+        printf("Player %d: %s, Goals: %d, Matches: %d\n", i + 1, player[i].name, player[i].goals, player[i].matches);
     }
 }
