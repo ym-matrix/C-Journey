@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+// Structure to store the details of a bank customer.
 struct bank
 {
     char name[20];
@@ -9,10 +10,15 @@ struct bank
 
 int main()
 {
+    // Array to store details of up to 10 customers.
     struct bank customer[10];
     int i, n;
+
+    // Read the number of customers.
     printf("Enter the number of customers:");
     scanf("%d", &n);
+
+    // Read each customer's name, account number, and balance.
     for (i = 0; i < n; i++)
     {
         printf("Enter the name of customer:");
@@ -23,6 +29,7 @@ int main()
         scanf("%f", &customer[i].balance);
     }
 
+    // Display customers whose balance is below 5000.
     for (i = 0; i < n; i++)
     {
         if (customer[i].balance < 5000)
