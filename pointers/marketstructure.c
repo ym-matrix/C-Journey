@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+// Structure to store the details of one market product.
 struct market
 {
     char name[20];
@@ -9,10 +10,15 @@ struct market
 
 int main()
 {
+    // Array to store details of up to 10 products.
     struct market product[10];
     int i, n;
+
+    // Read the number of products.
     printf("Entr number of products:");
     scanf("%d", &n);
+
+    // Read the name, quantity, and price of each product.
     for (i = 0; i < n; i++)
     {
         printf("Enter name of product: ");
@@ -23,6 +29,7 @@ int main()
         scanf("%f", &product[i].price);
     }
 
+    // Display the details of all entered products.
     {
         printf("\nProduct details:\n");
         for (i = 0; i < n; i++)
